@@ -1,0 +1,13 @@
+////
+/// @group top-bar
+////
+
+@mixin top-bar {
+	.top-bar {
+		padding: 2em;
+		transition: padding .25s ease; }
+		
+	.is-stuck .top-bar {
+		padding: 1em;
+		transition: padding .25s ease; }
+}
