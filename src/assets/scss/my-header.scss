@@ -1,0 +1,27 @@
+@mixin my-header {
+	@include my-top-bar;
+	
+	.header {
+		padding: 10em 0;
+		background: url("http://placehold.it/2000x500&text=this is a header") center center no-repeat;
+		background-size: cover; }
+	
+	[data-sticky] {
+		width: 100%; }
+		
+	@media #{$medium-up} {
+		.top-bar-container {
+			height: 6em !important;
+		}
+	}
+}
+
+@mixin my-top-bar {
+	.top-bar {
+		padding: 2em;
+		transition: padding .25s ease; }
+		
+	.is-stuck .top-bar {
+		padding: 1em;
+		transition: padding .25s ease; }
+}

@@ -42,7 +42,7 @@
 @include foundation-thumbnail;
 @include foundation-title-bar;
 @include foundation-tooltip;
-// @include foundation-top-bar;
+@include foundation-top-bar;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 // @include foundation-flex-classes;
@@ -50,4 +50,5 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-@include top-bar;
+// customizations to template
+@include my-header;
