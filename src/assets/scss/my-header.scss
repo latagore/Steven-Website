@@ -28,4 +28,9 @@
 	.is-stuck .top-bar {
 		padding: 1em;
 		transition: padding .25s ease; }
+	
+	.top-bar-title *{
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
