@@ -20,6 +20,13 @@
 		
 		& .sticky {
 			width: 100%; 
+			
+			// need to force relative position so that 
+			// the elements don't shift when positions are calculated
+			position: relative;
+			&.is-stuck {
+				position: fixed;
+			}
 		}
 	}
 
