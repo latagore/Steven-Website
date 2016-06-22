@@ -4,11 +4,6 @@
 	#header {
 		position: relative;
 	}
-	
-	.heading {
-		text-align: center;
-    font-family: 'Merriweather Sans', sans-serif;
-	}
 }
 
 @mixin my-top-bar {
@@ -62,5 +57,12 @@
 				0px 2px 3px black;
 
 		}
+	}
+}
+
+@mixin my-body {
+	.heading {
+		text-align: center;
+		font-family: 'Merriweather Sans', sans-serif;
 	}
 }
