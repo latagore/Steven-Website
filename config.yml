@@ -56,7 +56,9 @@ PATHS:
     # - "bower_components/foundation-sites/js/foundation.toggler.js"
     # - "bower_components/foundation-sites/js/foundation.tooltip.js"
     # Motion UI
-    - "bower_components/motion-ui/motion-ui.js"		
-		# Paths to your own project code are here
+    - "bower_components/motion-ui/motion-ui.js"
+    # Stack-up.js
+    - "src/assets/js/stack-up/stack-up.js"
+    # Paths to your own project code are here
     - "src/assets/js/!(app).js"
     - "src/assets/js/app.js"
