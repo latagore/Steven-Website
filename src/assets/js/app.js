@@ -17,4 +17,15 @@ $('.top-bar-container').on('sticky.zf.stuckto:top', function(){
 	} else {
 		MotionUI.animateIn(".header-name", 'fade-in');
 	}
-})
+});
+
+// Create a stackup object.
+var stackup = new StackUp({
+	containerSelector: '#grid-container',
+	itemsSelector: '.grid-item',
+	columnWidth: 320,
+	isFluid: true,
+	boundary: $('#grid-boundary').get(0)
+});
+// Initialize once you are done configurating.
+stackup.initialize();

@@ -72,4 +72,18 @@
 		text-align: center;
 		font-family: 'Merriweather Sans', sans-serif;
 	}
+	
+	#grid-container {
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.grid-item {
+		position: absolute;
+	}
+
+	.grid-item img {
+		width: 100%;
+	}
 }
