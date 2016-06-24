@@ -53,6 +53,15 @@ var gallery = $('.gallery').featherlightGallery({
 			}
 		}
 });
+// special case for duplicate pictures on soft dev
+// one appears on small breakpoint and the other appears
+// on other sizes
+// gallery should only show one of them
+$('#small-soft-dev-pic').click( function(event) {
+	event.preventDefault();
+	$('#medium-soft-dev-pic').click();
+});
+
 // Create a stackup object.
 var stackup = new StackUp({
 	containerSelector: '#grid-container',
