@@ -39,8 +39,8 @@ var gallery = $('.gallery').featherlightGallery({
 			// fade out and remove old captions
 			this.$instance
 				.find(".caption")
-				.fadeOut(this.closeSpeed)
-				.remove();
+				.fadeOut(this.closeSpeed, 
+					function() { this.remove(); });
 			// add new caption
 			this.$instance
 				.children(".featherlight-content")
