@@ -116,7 +116,6 @@
 		& .caption {
 			display: inline-block;
 			position: fixed;
-
 		}
 		.featherlight-inner {
 			height: 100%;
@@ -126,8 +125,14 @@
 		}
 	}
 	
-	
+	.featherlight-next {
+		left: auto;
+	}
+	.featherlight-previous {
+		right: auto;
+	}
 	.featherlight-next, .featherlight-previous {
+		padding: 20px;
 		position: fixed;
 		.featherlight:hover & span {
 			display: inline-block;
@@ -139,6 +144,7 @@
 		}
 		& span {
 			width: inherit;
+			position: relative;
 		}
 		&:hover {
 			background-color: transparent;
