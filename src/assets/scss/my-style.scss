@@ -90,6 +90,7 @@
 	// gallery
 	$gallery-padding: 2px;
 	$caption-margin: 2px;
+	$caption-color: white;
 	.caption {
 		display: none;
 		text-align: center;
@@ -97,8 +98,12 @@
 		left: $caption-margin;
 		right: $caption-margin;
 		background: fade-out(black, 0.3);
-		color: white;
+		color: $caption-color;
 		padding: 0.5rem;
+		& abbr {
+			color: $caption-color;
+			border-bottom: none;
+		}
 	}
 	
 	.featherlight .featherlight-content {
