@@ -89,8 +89,16 @@
 	
 	// gallery
 	$gallery-padding: 2px;
+	$caption-margin: 2px;
 	.caption {
 		display: none;
+		text-align: center;
+		bottom: $caption-margin;
+		left: $caption-margin;
+		right: $caption-margin;
+		background: fade-out(black, 0.3);
+		color: white;
+		padding: 0.5rem;
 	}
 	
 	.featherlight .featherlight-content {
@@ -102,14 +110,8 @@
 		
 		& .caption {
 			display: inline-block;
-			bottom: 0;
-			padding: 0.5rem;
-			position: absolute;
-			bottom: $gallery-padding;
-			left: $gallery-padding;
-			right: $gallery-padding;
-			background: fade-out(black, 0.7);
-			color: white;
+			position: fixed;
+
 		}
 		.featherlight-inner {
 			height: 100%;
