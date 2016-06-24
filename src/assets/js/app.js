@@ -19,6 +19,12 @@ $('.top-bar-container').on('sticky.zf.stuckto:top', function(){
 	}
 });
 
+// Initialize gallery
+$('.gallery').featherlightGallery({
+    openSpeed: 300,
+		previousIcon: '&#12296;',
+		nextIcon: '&#12297;'
+});
 // Create a stackup object.
 var stackup = new StackUp({
 	containerSelector: '#grid-container',

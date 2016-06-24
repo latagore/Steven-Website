@@ -26,6 +26,7 @@ PATHS:
   sass:
     - "bower_components/foundation-sites/scss"
     - "bower_components/motion-ui/src"
+    - "bower_components/featherlight/src"
   # Paths to JavaScript libraries, which are compined into one file
   javascript:
     # Libraries requried by Foundation
@@ -57,6 +58,9 @@ PATHS:
     # - "bower_components/foundation-sites/js/foundation.tooltip.js"
     # Motion UI
     - "bower_components/motion-ui/motion-ui.js"
+    # Featherlight.js and Featherlight.gallery.js
+    - "bower_components/featherlight/src/featherlight.js"
+    - "bower_components/featherlight/src/featherlight.gallery.js"
     # Stack-up.js
     - "src/assets/js/stack-up/stack-up.js"
     # Paths to your own project code are here

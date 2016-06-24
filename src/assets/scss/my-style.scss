@@ -86,4 +86,28 @@
 	.grid-item img {
 		width: 100%;
 	}
+	
+	.featherlight .featherlight-content {
+		box-sizing: initial;
+		max-height: 80%;
+		padding: 2px;
+		border-radius: 2px;
+	}
+	
+	.featherlight-next, .featherlight-previous {
+		.featherlight-content:hover & span {
+			display: inline-block;
+			color: fade-out(white, 0.5);
+			text-shadow: none;
+		}
+		.featherlight-content:hover &:hover span {
+			color: white;
+		}
+		& span {
+			width: inherit;
+		}
+		&:hover {
+			background-color: transparent;
+		}
+	}
 }
