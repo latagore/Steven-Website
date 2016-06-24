@@ -27,19 +27,25 @@ var gallery = $('.gallery').featherlightGallery({
 		beforeContent: function(){
 			// remove any existing captions and add the caption
 			// for the current slide
+			
+			// get number of existing captions
 			var numExistingCaptions = 
 				this.$instance.find(".caption").length;
+			// duplicate new caption
 			var caption = this.$currentTarget
 				.find(".caption")
 				.clone();
-			caption.hide();
+			caption.hide(); // make it initially invisible
+			// fade out and remove old captions
+			this.$instance
+				.find(".caption")
+				.fadeOut(this.closeSpeed)
+				.remove();
+			// add new caption
 			this.$instance
 				.children(".featherlight-content")
 				.append(caption);
-
-			this.$instance
-				.find(".caption")
-				.fadeOut(this.closeSpeed);
+			// animate new caption in
 			if (numExistingCaptions > 0) {
 				caption.delay(this.closeSpeed).fadeIn(this.openSpeed);
 			} else {
