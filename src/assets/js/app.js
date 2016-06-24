@@ -20,11 +20,7 @@ $('.top-bar-container').on('sticky.zf.stuckto:top', function(){
 });
 
 // Initialize gallery
-var gallery = $('.gallery').featherlightGallery({
-    openSpeed: 300,
-		previousIcon: '&#12296;',
-		nextIcon: '&#12297;',
-		beforeContent: function(){
+var galleryBeforeContent = function(){
 			// remove any existing captions and add the caption
 			// for the current slide
 			
@@ -51,7 +47,18 @@ var gallery = $('.gallery').featherlightGallery({
 			} else {
 				caption.fadeIn(this.openSpeed);
 			}
-		}
+		};
+var gallery = $('.gallery').featherlightGallery({
+    openSpeed: 300,
+		previousIcon: '&#12296;',
+		nextIcon: '&#12297;',
+		beforeContent: galleryBeforeContent
+});
+var gallery = $('.gallery2').featherlightGallery({
+    openSpeed: 300,
+		previousIcon: '&#12296;',
+		nextIcon: '&#12297;',
+		beforeContent: galleryBeforeContent
 });
 // special case for duplicate pictures on soft dev
 // one appears on small breakpoint and the other appears
