@@ -123,7 +123,8 @@
 	
 	
 	.featherlight-next, .featherlight-previous {
-		.featherlight-content:hover & span {
+		position: fixed;
+		.featherlight:hover & span {
 			display: inline-block;
 			color: fade-out(white, 0.5);
 			text-shadow: none;
