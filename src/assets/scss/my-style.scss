@@ -127,12 +127,15 @@
 	
 	.featherlight-next {
 		left: auto;
+		right: 0;
 	}
 	.featherlight-previous {
+		left: 0;
 		right: auto;
 	}
 	.featherlight-next, .featherlight-previous {
-		padding: 20px;
+		width: 15%;
+		max-width: 120px;
 		position: fixed;
 		.featherlight:hover & span {
 			display: inline-block;
@@ -143,8 +146,11 @@
 			color: white;
 		}
 		& span {
-			width: inherit;
+			width: 100%;
 			position: relative;
+			text-align: center;
+			left: auto;
+			right: auto;
 		}
 		&:hover {
 			background-color: transparent;
