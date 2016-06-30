@@ -3,6 +3,7 @@
 # http://docstore.mik.ua/orelly/linux/cgi/ch09_04.htm
 use strict;
 use CGI;
+use JSON;
 
 # Clean up environment for taint mode before calling sendmail
 BEGIN {
@@ -15,22 +16,27 @@ my $blah = $q->param( "email" );
 my $email   = validate_email_address( $q->param( "email" ) );
 my $message = $q->param( "message" );
 my $name    = $q->param( "name" );
+my $response;
 
 unless ( $email ) {
-    print $q->header( "text/html" ),
-          $q->start_html( "Invalid Email Address" ),
-          $q->h1( "Invalid Email Address" ),
-          $q->p( "The email address you entered is invalid. " .
-                 "Please use your browser's Back button to " .
-                 "return to the form and try again." );
-          $q->end_html;
-    exit;
+		
+    $response = {
+			status => "error",
+			message => 'Invalid email address. Emails must be in the form johnsmith@example.com'
+		};
+		print $q->header("text/json"),
+			to_json($response);
+		exit;
 }
 
 send_feedback( $email, $message, $name);
 send_receipt( $email );
 
-print $q->redirect( "/feedback/thanks.html" );
+$response = {
+	status => "success"
+};
+print $q->header("text/json"),
+	to_json($response);
 
 sub validate_email_address {
 	my ($email) = @_;
