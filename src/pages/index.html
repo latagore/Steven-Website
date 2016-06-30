@@ -17,7 +17,7 @@ description: blah
 				<p>Hi, I'm Steven and welcome to my website. Here, I showcase my current progress of who I am and what I'm capable of. I have too many interests that I'll ever have the time for, particularly in making things and software development. I'm a perfectionist at heart and many things are an all-or-nothing effort to me.</p>
 
 				<div class="button-group">
-					<a href="#" class="button">Contact Me</a>
+					<a href="#contact" class="button">Contact Me</a>
 					<a href="https://github.com/latagore" class="button hollow">GitHub</a>
 					<a href="https://www.etsy.com/ca/shop/AurorasQuay" class="button hollow">Etsy</a>
 				</div>
@@ -100,9 +100,26 @@ description: blah
 	<div class="row column text-center">
 		<h3 class="heading">Interested in what you see?</h3>
 		<div class="button-group">
-			<a href="#" class="button">Contact Me</a>
+			<a href="#contact" class="button">Contact Me</a>
 			<a href="https://github.com/latagore" class="button hollow">See my GitHub</a>
 			<a href="https://www.etsy.com/ca/shop/AurorasQuay" class="button hollow">See my Etsy Store</a>
 		</div>
 	</div>
+</div>
+<hr>
+
+<div class="row">
+	<form id="contact" action="/message" class="large-6 large-offset-3 medium-10 medium-offset-1 columns">
+		<h3 class="heading">Contact Form</h3>
+		<label>Name
+			<input name="name" type="text" placeholder="John Smith" />
+		</label>
+		<label>Email
+			<input name="email" type="email" placeholder="someone@example.com" />
+		</label>
+		<label>Message
+			<textarea name="message" rows="3"></textarea>
+		</label>
+		<button class="button" type="submit">Send Message</button>
+	</form>
 </div>
