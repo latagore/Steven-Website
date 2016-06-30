@@ -27,6 +27,9 @@ PATHS:
     - "bower_components/foundation-sites/scss"
     - "bower_components/motion-ui/src"
     - "bower_components/featherlight/src"
+  # paths to cgi scripts
+  cgi:
+    - "src/cgi/**/*"
   # Paths to JavaScript libraries, which are compined into one file
   javascript:
     # Libraries requried by Foundation
