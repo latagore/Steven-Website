@@ -77,6 +77,27 @@
 		font-weight: 600;
 	}
 	
+	// call to action
+	#call-to-action .button-group{
+		margin-bottom: 0;
+	}
+	#call-to-action-or {
+		text-align: center;
+		
+		&:before{
+			display: inline-block;
+			content: '\2014';
+			padding-right: 0.5em;
+			color: grey;
+		}
+		&:after{
+			display: inline;
+			content: '\2014';
+			padding-left: 0.5em;
+			color: grey;
+		}
+	}
+	
 	#grid-container {
 		position: relative;
 		margin-left: auto;
