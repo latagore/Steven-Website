@@ -19,6 +19,46 @@ $('.top-bar-container').on('sticky.zf.stuckto:top', function(){
 	}
 });
 
+// Initialize form
+// create an error element on top of form
+$('form#contact').parent().before("<div id='contact-error' class='row' style='display:none'></div>");
+$('form#contact').submit(function(event){
+	event.preventDefault();
+	$('#contact-error').hide();
+	$('#contact-error')
+		.removeClass('callout')
+		.removeClass('success')
+		.removeClass('warning');
+		
+	
+	$.ajax(
+		this.action + "?" + $(this).serialize(),
+		{
+			success: function(data){
+				if (data.status === "success"){
+					$('#contact-error')
+						.html("Message sent!")
+						.addClass("callout")
+						.addClass("success")
+						.show();
+					
+					$('form#contact').fadeOut();
+				} else {
+					$('#contact-error')
+						.addClass("callout")
+						.addClass("warning");
+					if (data.message){
+						$('#contact-error').html(data.message).show();
+					} else {
+						$('#contact-error').html("Hm, something went wrong with sending this message.").show();
+					}
+				}
+			}
+		}
+	);
+});
+
+
 // Initialize gallery
 var galleryBeforeContent = function(){
 			// remove any existing captions and add the caption
