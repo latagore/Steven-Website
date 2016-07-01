@@ -13,7 +13,14 @@
   <body>
 	
 	<div id="header">
-		<img src="assets/img/PANO.jpg">
+		<img srcset="assets/img/PANO.jpg  4620w,
+			assets/img/1920_PANO.jpg 1920w,
+			assets/img/1440_PANO.jpg 1440w,
+			assets/img/1366_PANO.jpg 1366w,
+			assets/img/1024_PANO.jpg 1024w"
+			sizes="100vw"
+			src="assets/img/1024_PANO.jpg"
+			alt="A scenic marsh view with someone standing on a bridge, partially hidden by a parasol" />
 		
 		<div id="top-bar-container" class="top-bar-container" data-sticky-container>
 			<div data-sticky data-margin-top='0' data-top-anchor="top-bar-container:top" data-btm-anchor="content:bottom">
