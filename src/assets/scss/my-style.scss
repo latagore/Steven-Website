@@ -99,17 +99,22 @@
 	}
 	
 	#grid-container {
-		position: relative;
-		margin-left: auto;
-		margin-right: auto;
-	}
+		& .grid-item {
+			text-align: center;
+		}
+		&.active {
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
 
-	.grid-item {
-		position: absolute;
-	}
+			& .grid-item {
+				position: absolute;
+			}
 
-	.grid-item img {
-		width: 100%;
+			& .grid-item img {
+				width: 100%;
+			}
+		}
 	}
 	
 	// gallery
