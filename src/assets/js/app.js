@@ -109,15 +109,17 @@ $('#small-soft-dev-pic').click( function(event) {
 	$('#medium-soft-dev-pic').click();
 });
 
-// Create a stackup object.
-// activate required css if javascript is enabled
-$('#grid-container').addClass('active'); 
-var stackup = new StackUp({
-	containerSelector: '#grid-container',
-	itemsSelector: '.grid-item',
-	columnWidth: 320,
-	isFluid: true,
-	boundary: $('#grid-boundary').get(0)
+// format gallery after all images are loaded
+$(document).load(function() {
+	// Create a stackup object.
+	// activate required css if javascript is enabled
+	$('#grid-container').addClass('active'); 
+	var stackup = new StackUp({
+		containerSelector: '#grid-container',
+		itemsSelector: '.grid-item',
+		columnWidth: 320,
+		isFluid: true,
+		boundary: $('#grid-boundary').get(0)
+	});
+	stackup.initialize();
 });
-// Initialize once you are done configurating.
-stackup.initialize();
