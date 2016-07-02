@@ -110,7 +110,7 @@ $('#small-soft-dev-pic').click( function(event) {
 });
 
 // format gallery after all images are loaded
-$(document).load(function() {
+$(window).on('load', function() {
 	// Create a stackup object.
 	// activate required css if javascript is enabled
 	$('#grid-container').addClass('active'); 
